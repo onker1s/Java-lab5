@@ -373,7 +373,7 @@ public class GraphicsDisplay extends JPanel {
                     graphicsDataList.add(new Double[]{point[0],point[1]});
                 }
             }
-            System.out.println(graphicsDataList);
+
             graphicMemoryStack.add(tempList);
             graphicsData = new Double[graphicsDataList.size()][1];
             graphicsData =graphicsDataList.toArray(graphicsData);
@@ -472,7 +472,6 @@ minY
 // Порядок вызова методов имеет значение, т.к. предыдущий рисунок будет затираться последующим
 // Первыми (если нужно) отрисовываются оси координат.
 
-        System.out.println(graphicMemoryStack);
 
         if(showPolygons) searchPolygon(g);
         if (showAxis) paintAxis(canvas);
